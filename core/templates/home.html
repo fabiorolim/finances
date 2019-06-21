@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contas no azul</title>
+</head>
+<body>
+<table border="1" width="80%">
+    <tr>
+        <td>ID:</td>
+        <td>Data:</td>
+        <td>Descrição:</td>
+        <td>Valor:</td>
+        <td>Tipo:</td>
+        <td>Meio de pagamento:</td>
+        <td>Categoria:</td>
+    </tr>
+    {% for account in accounts %}
+        <tr>
+            <td>{{ account.id }}</td>
+            <td>{{ account.account_data }}</td>
+            <td>{{ account.description }}</td>
+            <td>{{ account.value }}</td>
+            <td>{{ account.type }}</td>
+            <td>{{ account.type_payment }}</td>
+            <td>{{ account.category }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/download_csv/">Baixar CSV</a>
+</body>
+</html>
