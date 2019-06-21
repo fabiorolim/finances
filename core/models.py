@@ -16,10 +16,10 @@ class Account(models.Model):
     description = models.TextField(null=False, verbose_name='Descrição')
     value = models.DecimalField(decimal_places=0, null=False, max_digits=10,
                                 verbose_name='Valor')
-    type = models.CharField(null=False, choices=TYPE_ACCOUNTS, max_length=14,
+    type = models.CharField(null=False, choices=TYPE_ACCOUNTS, max_length=7,
                             verbose_name='Tipo')
     type_payment = models.CharField(null=False, choices=TYPE_PAYMENTS,
-                                    max_length=8,
+                                    max_length=13,
                                     verbose_name='Meio de pagamento')
     category = models.ForeignKey('Category', on_delete=models.CASCADE,
                                  verbose_name='Categoria')
